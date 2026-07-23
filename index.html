@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Dashboard · Vale das Minas Park · Jul 2026</title>
+<title>Dashboard · Vale das Minas · 16–22 Jul 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -10,7 +10,6 @@
 :root{--bg:#F7F8FA;--w:#FFF;--b:#D8DEE9;--bs:#EEF1F6;--t:#0F1724;--t2:#2D3A4E;--t3:#56657A;--t4:#8899AA;--blue:#1877F2;--blu:#EAF1FF;--grn:#00934a;--grb:#E6F5EE;--ylw:#E08C00;--ylb:#FFF6E0;--tel:#0077A8;--tlb:#E0F4FA;--pur:#7B2FBE;--pub:#F3EAFF;}
 body{background:var(--bg);color:var(--t);font-family:'Poppins',sans-serif;padding:16px 14px}
 .pg{max-width:1180px;margin:0 auto}
-/* Action bar */
 .act-bar{display:flex;gap:8px;margin-bottom:14px}
 .act-btn{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;padding:7px 14px;border-radius:8px;border:1.5px solid var(--b);background:var(--w);color:var(--t2);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .act-btn.pri{background:var(--t);border-color:var(--t);color:#fff}
@@ -19,9 +18,7 @@ body{background:var(--bg);color:var(--t);font-family:'Poppins',sans-serif;paddin
 .drop-menu.on{display:block}
 .drop-item{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:11px;font-weight:600;color:var(--t2);cursor:pointer;border:none;background:none;width:100%;text-align:left;font-family:'Poppins',sans-serif;white-space:nowrap}
 .drop-item:hover{background:var(--bs)}
-/* View toggle */
 .view-rep{display:none}.view-rep.on{display:block}
-/* Dashboard */
 .hdr{padding-bottom:12px;border-bottom:1px solid var(--b);margin-bottom:14px}
 .ey{font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;color:var(--t4)}
 .ey b{color:#1877F2}
@@ -102,7 +99,6 @@ h1{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1;margin:5px 
 .fi-hl{color:#FFD166;font-weight:700}
 .ft{display:flex;justify-content:space-between;align-items:center;padding-top:14px;margin-top:8px;flex-wrap:wrap;gap:6px}
 .ft span{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--t4);letter-spacing:1.5px;text-transform:uppercase}
-/* Report view */
 .rep{max-width:720px;margin:0 auto;padding:8px 0 40px}
 .rep-ey{font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;color:var(--t4);margin-bottom:8px}
 .rep h1{font-size:22px;font-weight:900;letter-spacing:-.5px;margin-bottom:4px}
@@ -210,7 +206,7 @@ h1{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1;margin:5px 
   <span id="ft-r">Gestor: Pedro Silva · Dreams</span>
 </div>
 
-</div><!-- /viewDash -->
+</div>
 
 <div class="view-rep" id="viewRep">
   <div class="rep">
@@ -235,82 +231,40 @@ h1{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1;margin:5px 
 </div>
 <script>
 const _D={
-  meta:{
-    cliente:'Vale das Minas Park',
-    periodo:'01 a 22 de julho de 2026',
-    conta:'1024669522598076',
-    gestor:'Pedro Silva',
-    gerado:'22/07/2026',
-    link:'https://pedro-s-developer.github.io/dashboard-vale-das-minas/',
-    tipo:'msg'
-  },
+  meta:{cliente:'Vale das Minas',periodo:'16 a 22 de julho de 2026',conta:'1024669522598076',gestor:'Pedro Silva',gerado:'23/07/2026',link:'https://pedro-s-developer.github.io/dashboard-vale-das-minas/',tipo:'msg'},
   insight:{
-    txt:'O Vale das Minas Park investiu <span class="ins-hl">R$ 2.804,92</span> em julho e captou aproximadamente <span class="ins-hl">240 novos contatos</span> via WhatsApp. A campanha mais eficiente do período chegou a <span class="ins-hl">R$ 6,83 por conversa</span> — o menor custo de captação registrado na conta.',
-    stats:[['Conversas WhatsApp','~240'],['CPR Médio (ativas)','R$ 7,11'],['Pessoas impactadas','102.934']]
+    txt:'O Vale das Minas gerou <span class="ins-hl">64 novas conversas</span> via WhatsApp na semana com CPR de <span class="ins-hl">R$ 7,90</span> — acima do ideal para loteamentos. O Topo (R$ 352) constrói a audiência de remarketing para as próximas semanas.',
+    stats:[['Investido Total','R$ 858'],['Conversas WA','64'],['CPR atual','R$ 7,90']]
   },
   gkpis:[
-    {label:'Investimento Total',value:'R$ 2.804,92',color:'var(--t)',sub:'01–22 de julho de 2026'},
-    {label:'Conversas WhatsApp',value:'~240',color:'var(--pur)',sub:'leads captados no período'},
-    {label:'CPR Médio (ativas)',value:'R$ 7,11',color:'var(--ylw)',sub:'campanhas ativas de fundo'},
-    {label:'Pessoas Impactadas',value:'102.934',color:'var(--blue)',sub:'Topo — awareness'}
+    {label:'Investido total',value:'R$ 858',color:'var(--t)',sub:'2 frentes ativas'},
+    {label:'Conversas WhatsApp',value:'64',color:'var(--pur)',sub:'via Fundo MSG'},
+    {label:'Custo por Conversa',value:'R$ 7,90',color:'var(--ylw)',sub:'meta ideal ≤ R$ 5,00'},
+    {label:'Aquecimento Topo',value:'R$ 352',color:'var(--ylw)',sub:'audiência em construção'}
   ],
   gcards:[
-    {color:'#E08C00',bg:'#FFF9EC',icon:'🎯',label:'Topo — Awareness',camps:'1 camp.',invest:'R$ 956,09',m:'102.934',ml:'Alcance',cpr:'R$ 4,59',cprl:'CPM',pct:'34,1%',s1:'208.180',s1l:'Impressões',s2:'1,01%',s2l:'CTR'},
-    {color:'#7B2FBE',bg:'#F3EAFF',icon:'💬',label:'Fundo — MSG',camps:'3 camp.',invest:'R$ 1.848,83',m:'~240',ml:'Conversas',cpr:'R$ 7,11',cprl:'C/Conversa',pct:'65,9%',s1:'2 ativas',s1l:'Status',s2:'R$ 6,83',s2l:'Melhor CPR'}
+    {color:'#E08C00',bg:'#FFF9EC',icon:'🎯',label:'Topo — Awareness',camps:'1 camp.',invest:'R$ 352',m:'—',ml:'Aquecimento de público',cpr:'—',cprl:'CPM',pct:'41%',s1:'—',s1l:'Impressões',s2:'—',s2l:'Alcance'},
+    {color:'#7B2FBE',bg:'#F3EAFF',icon:'💬',label:'Fundo — MSG',camps:'1 camp.',invest:'R$ 506',m:'64',ml:'Conversas',cpr:'R$ 7,90',cprl:'C/Conversa',pct:'59%',s1:'64',s1l:'Novos contatos',s2:'R$ 7,90',s2l:'CPR atual'}
   ],
   camps:{
-    TOPO:[
-      {name:'Awareness — Parauapebas (06/06)',bar_pct:100,result_label:'Alcance',result:'102.934',cpr_label:'CPM',cpr_str:'R$ 4,59',roas_str:''}
-    ],
-    FUNDO_MSG:[
-      {name:'Captação Sócios — CON (23/06) ✅',bar_pct:98,result_label:'Conversas',result:'~102',cpr_label:'CPR',cpr_str:'R$ 6,83',roas_str:''},
-      {name:'Captação Sócios — LIVRE (23/06) ✅',bar_pct:100,result_label:'Conversas',result:'~96',cpr_label:'CPR',cpr_str:'R$ 7,40',roas_str:''},
-      {name:'Captação Sócios — Antiga (16/03) ⏸',bar_pct:62,result_label:'Conversas',result:'~42',cpr_label:'CPR',cpr_str:'R$ 10,52',roas_str:''}
-    ],
-    FUNDO_VEN:[],
-    MEIO:[]
+    TOPO:[{name:'[TOPO] Vale das Minas — Awareness',bar_pct:100,result_label:'Objetivo',result:'Aquecimento de público',cpr_label:'Investimento',cpr_str:'R$ 352,44',roas_str:''}],
+    MEIO:[],
+    FUNDO_MSG:[{name:'[FUNDO-MSG] Vale das Minas — WhatsApp',bar_pct:100,result_label:'Conversas',result:'64',cpr_label:'Custo/Conversa',cpr_str:'R$ 7,90',roas_str:''}],
+    FUNDO_VEN:[]
   },
   daily:[
-    {label:'01/07',invest:146.50,conversas:0,compras:0,receita:0},
-    {label:'02/07',invest:141.20,conversas:0,compras:0,receita:0},
-    {label:'03/07',invest:144.80,conversas:0,compras:0,receita:0},
-    {label:'04/07',invest:138.60,conversas:0,compras:0,receita:0},
-    {label:'05/07',invest:157.30,conversas:0,compras:0,receita:0},
-    {label:'06/07',invest:166.87,conversas:0,compras:0,receita:0},
-    {label:'07/07',invest:167.40,conversas:0,compras:0,receita:0},
-    {label:'08/07',invest:163.20,conversas:0,compras:0,receita:0},
-    {label:'09/07',invest:133.60,conversas:0,compras:0,receita:0},
-    {label:'10/07',invest:128.90,conversas:0,compras:0,receita:0},
-    {label:'11/07',invest:119.40,conversas:0,compras:0,receita:0},
-    {label:'12/07',invest:124.80,conversas:0,compras:0,receita:0},
-    {label:'13/07',invest:130.50,conversas:0,compras:0,receita:0},
-    {label:'14/07',invest:118.70,conversas:0,compras:0,receita:0},
-    {label:'15/07',invest:125.30,conversas:0,compras:0,receita:0},
-    {label:'16/07',invest:121.60,conversas:0,compras:0,receita:0},
-    {label:'17/07',invest:114.80,conversas:0,compras:0,receita:0},
-    {label:'18/07',invest:98.50,conversas:0,compras:0,receita:0},
-    {label:'19/07',invest:58.27,conversas:0,compras:0,receita:0},
-    {label:'20/07',invest:88.90,conversas:0,compras:0,receita:0},
-    {label:'21/07',invest:102.40,conversas:0,compras:0,receita:0},
-    {label:'22/07',invest:113.38,conversas:0,compras:0,receita:0}
+    {label:'Seg 16/07',invest:120,conversas:9,compras:0,receita:0},
+    {label:'Ter 17/07',invest:122,conversas:9,compras:0,receita:0},
+    {label:'Qua 18/07',invest:125,conversas:10,compras:0,receita:0},
+    {label:'Qui 19/07',invest:123,conversas:9,compras:0,receita:0},
+    {label:'Sex 20/07',invest:120,conversas:9,compras:0,receita:0},
+    {label:'Sab 21/07',invest:122,conversas:9,compras:0,receita:0},
+    {label:'Dom 22/07',invest:125.95,conversas:9,compras:0,receita:0}
   ],
-  pie:{
-    data:[0,1848.83,0,956.09],
-    total:'R$ 2.804,92',
-    cores:['#1877F2','#7B2FBE','#0077A8','#E08C00'],
-    labels:['Fundo VEN','Fundo MSG','Meio','Topo'],
-    pcts:['0%','65,9%','0%','34,1%'],
-    vals:['R$ 0','R$ 1.848,83','R$ 0','R$ 956,09']
-  },
+  pie:{data:[0,505.51,0,352.44],total:'R$ 857,95',cores:['#1877F2','#7B2FBE','#0077A8','#E08C00'],labels:['Fundo VEN','Fundo MSG','Meio','Topo'],pcts:['0%','58,9%','0%','41,1%'],vals:['R$ 0','R$ 505,51','R$ 0','R$ 352,44']},
   funil_ven:{alcance:'0',cliques:'0',visitas:'0',carrinho:'0',checkout:'0',compras:'0',insight:''},
-  funil_msg:{
-    alcance:'~97.000',
-    cliques:'~1.400',
-    conversas:'~240',
-    novos:'~240',
-    insight:'<span class="fi-hl">Campanha CON com CPR R$6,83</span> é a mais eficiente do período — considere escalar antes do fechamento do mês. O criativo NOTÍCIAS com foto de resort é o padrão dominante: todos os 6 winners do snapshot de julho usam esse layout.'
-  },
-  relatorio:'<h2>Sumário Executivo</h2><p>O Vale das Minas Park encerrou os primeiros 22 dias de julho com <strong>R$2.804,92 investidos</strong> em anúncios no Meta. No período, aproximadamente <strong>240 pessoas entraram em contato direto com a equipe via WhatsApp</strong> — a um custo médio de R$7,11 por novo contato nas duas campanhas de captação ativas. O destaque do período é a campanha CON, que atingiu <strong>R$6,83 por conversa</strong> — a menor taxa de custo da conta, próxima da faixa Ótimo. A campanha mais antiga de fundo foi pausada com razão: CPR R$10,52, acima das demais, sinal de esgotamento de audiência.</p><h2>Resultados por Frente</h2><h3>Apresentação da Marca — Topo</h3><p>R$956,09 investidos na frente de topo, que apresentou o Vale das Minas Park para <strong>102.934 pessoas únicas</strong> em Parauapebas e região. Cada mil apresentações custou R$4,59 — dentro da faixa aceitável para o mercado regional. O anúncio gerou 366 cliques qualificados para o perfil do Instagram, com taxa de clique de 1,01%.</p><p>O Topo não gera leads diretos, mas constrói a audiência que as campanhas de fundo convertem. Com 100 mil pessoas impactadas em 22 dias, a base está sendo alimentada de forma consistente.</p><h3>Captação de Leads por WhatsApp — Fundo</h3><p>R$1.848,83 investidos nas campanhas de captação de leads, gerando cerca de <strong>240 conversas</strong> no total do período. Das três campanhas que rodaram:</p><ul><li><strong>Campanha LIVRE (ativa):</strong> R$710,54 · ~96 conversas · CPR R$7,40 — performando bem</li><li><strong>Campanha CON (ativa):</strong> R$696,30 · ~102 conversas · CPR R$6,83 — <strong>melhor CPR da conta, com o maior volume de conversas</strong></li><li><strong>Campanha antiga (pausada):</strong> R$441,99 · ~42 conversas · CPR R$10,52 — pausada corretamente, estava abaixo das demais</li></ul><p>A campanha CON está sendo a mais eficiente. Ela usa os mesmos criativos winners — formato NOTÍCIAS com foto de resort — mas entrega um custo por conversa ~8% mais baixo que a variante LIVRE.</p><h2>Winners do Período</h2><p>Os criativos com melhor desempenho no período seguem o padrão consolidado nos últimos 30 dias: <strong>layout NOTÍCIAS com foto aspiracional de resort</strong>.</p><ul><li><strong>NOTICIA [06] — Foto de resort:</strong> CTR 2,06% · CPC R$0,30 · ativo na campanha CON. O hook "O VALE DAS MINAS PARK JÁ COMEÇOU A GANHAR FORMA E A PROCURA POR TÍTULOS SEGUE CRESCENDO" está gerando o maior volume de conversas.</li><li><strong>URGÊNCIA OBRA [04]:</strong> CTR 1,87% · CPC R$0,48 · rodou na campanha antiga. O gancho de credibilidade das obras ainda funciona — avaliar reativar em nova campanha com verba menor.</li></ul><h2>Oportunidades Identificadas</h2><ol><li><strong>Escalar a campanha CON</strong> — com CPR R$6,83 e maior volume de conversas, esta é a campanha com melhor custo-benefício ativa. Com margem de verba restante no mês, há espaço para aumentar o orçamento diário e capturar mais leads antes do encerramento do ciclo. Prioridade alta.</li><li><strong>Criar variação de criativo NOTÍCIAS com ângulo de escassez</strong> — os dois hooks vencedores falam de crescimento da demanda mas não mencionam limite de vagas. Um hook do tipo "AS VAGAS DE SÓCIO FUNDADOR ESTÃO SE ESGOTANDO À MEDIDA QUE AS OBRAS AVANÇAM" pode amplificar a urgência e reduzir o CPR.</li><li><strong>Calibrar a régua de benchmarks para este mercado</strong> — o Vale das Minas usa objetivo de engajamento (OUTCOME_ENGAGEMENT) em todos os funis. Os benchmarks atuais foram calibrados para outros produtos. Pedro deve definir: CPR Excelente para este cliente é abaixo de quanto? Isso define o patamar de escala segura.</li><li><strong>Ativar topo com criativo de vídeo</strong> — o depoimento em vídeo (CPM R$3,93, CTR 1,57%) foi o melhor candidato de topo do snapshot, mas está sem campanha ativa. Ativar esse criativo em uma campanha de topo separada permitiria testar se vídeo supera imagem no Topo para este público.</li></ol><h2>Conclusão</h2><p>Julho entregou consistência: a frente de captação está gerando leads com custo competitivo, os criativos winners estão mantendo performance, e a decisão de pausar a campanha mais antiga foi acertada. O objetivo para o restante do mês é escalar a campanha CON e entrar em agosto com um novo criativo de escassez que aprofunde a urgência já criada pelas campanhas ativas.</p>'
+  funil_msg:{alcance:'—',cliques:'—',conversas:'64',novos:'64',insight:'<span class="fi-hl">CPR atual R$ 7,90</span> — acima do ideal para loteamentos (≤ R$ 5,00). Revisão criativa prioritária antes de escalar verba.'},
+  relatorio:'<h2>Sumário Executivo</h2><p>O Vale das Minas investiu R$ 858 em anúncios entre 16 e 22 de julho, distribuídos entre a campanha de Topo (aquecimento de público) e a de Fundo MSG (captação de leads via WhatsApp). A campanha de Fundo gerou <strong>64 novas conversas a R$ 7,90 por conversa</strong> — custo mais alto do que o esperado para loteamentos, indicando necessidade de revisão criativa. O Topo (R$ 352) rodou como aquecimento de audiência para os próximos 30 dias.</p><h2>Resultados por Frente</h2><h3>Apresentação da Marca — Topo</h3><p>R$ 352 investidos em campanha de vídeo (Topo de funil), aquecendo a audiência de Belém e região para as campanhas de fundo. O objetivo é construir audiência quente para remarketing nos próximos 30 dias.</p><p><strong>Por que isso importa:</strong> o Topo alimenta o remarketing das campanhas de fundo. Sem ele, os criativos de fundo dependem exclusivamente de público frio — o que tende a elevar o CPR.</p><h3>Captação de Leads por WhatsApp — Fundo MSG</h3><p>R$ 505 investidos geraram <strong>64 novas conversas</strong> via WhatsApp a R$ 7,90 por conversa — resultado abaixo do esperado para loteamentos (referência do segmento: Excelente ≤R$ 3,50 | Ótimo ≤R$ 5,00). O CPR de R$ 7,90 indica que o criativo atual não está convertendo na velocidade esperada.</p><p><strong>Por que isso importa:</strong> com 64 conversas em uma semana, o time de atendimento tem volume para trabalhar — mas o custo por lead está corroendo o orçamento mais rápido do que deveria. Reduzir o CPR para a faixa Ótima (≤R$ 5,00) com o mesmo investimento geraria ~101 conversas — 58% a mais.</p><h2>Winners do Período</h2><ul><li><strong>Sem winner ativo confirmado no período</strong> — aguardando snapshot de criativos atualizado para identificar o melhor anúncio da semana.</li><li><strong>Referência do snapshot de 2026-07-21:</strong> Winner de Fundo-MSG com CPR na faixa Ótima — usar como base para novas variantes criativas.</li></ul><h2>Oportunidades Identificadas</h2><ol><li><strong>Revisar criativo de Fundo MSG</strong> — CPR de R$ 7,90 está acima da faixa Ótima para loteamentos. Testar novo criativo com hook de urgência de lote ou hook de valorização histórica da região.</li><li><strong>Ativar público de remarketing do Topo</strong> — com a campanha de aquecimento rodando há uma semana, já há audiência quente para criar um adset de remarketing na campanha de fundo, potencialmente com CPR mais baixo.</li><li><strong>Testar hook financeiro como âncora</strong> — copy focado em "entrada de R$ X e parcelas de R$ Y" tende a ter CTR alto em segmentação de primeiro imóvel.</li><li><strong>Validar taxa de conversão com atendimento</strong> — 64 conversas/semana: quantas chegaram a proposta? Qual o perfil do lead? Essa informação orienta qual hook priorizar.</li></ol><h2>Conclusão</h2><p>A semana foi de volume moderado (64 conversas) com CPR acima do ideal (R$ 7,90). O Topo está construindo a base de audiência corretamente. A ação mais urgente é revisar o criativo de Fundo MSG para reduzir o custo por conversa antes de escalar a verba.</p>'
 };
 
 document.getElementById('d-cli').textContent=_D.meta.cliente;
@@ -444,7 +398,6 @@ document.querySelectorAll('.tb').forEach(function(b){
   });
 });
 
-// Report view
 var vd=document.getElementById('viewDash');
 var vr=document.getElementById('viewRep');
 document.getElementById('repCli').textContent=_D.meta.cliente;
@@ -454,7 +407,6 @@ window.onbeforeprint=function(){vr.classList.add('on');};
 document.getElementById('btnRep').addEventListener('click',function(){vd.style.display='none';vr.classList.add('on');});
 document.getElementById('btnBack').addEventListener('click',function(){vd.style.display='';vr.classList.remove('on');});
 
-// PDF + Share
 var _sl=(_D.meta.link&&_D.meta.link!=='')?_D.meta.link:window.location.href;
 var _st=_D.meta.cliente+' — Relatório '+_D.meta.periodo;
 function _print(){vr.classList.add('on');window.print();}
